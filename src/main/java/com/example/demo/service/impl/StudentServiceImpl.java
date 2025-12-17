@@ -6,12 +6,15 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
+
 @Service
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
+
     @Autowired
-    StudentRepository  stdrepo;
+    StudentRepository stdrepo;
+
     @Override
-    public Student poststudent(Student st){
-        retrun stdrepo.save(st);
+    public Student poststudent(Student st) {
+        return stdrepo.save(st);
     }
- }
+}

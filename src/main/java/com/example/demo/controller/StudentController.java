@@ -17,4 +17,3 @@ public class StudentController {
         return stdser.poststudent(st);
     }
 }
-}

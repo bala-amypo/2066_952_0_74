@@ -24,4 +24,12 @@ public class StudentController {
     public Optional<Student> getId(@pathVariable long id){
         return stdser.getById(id);
     }
+    public String deleteData(Long id)i
+boolean status=stdrepo.existsById(id);
+if(status){
+stdrepo.deleteById(id);
+return "Student Deleted Successfully";
+
+else
+return "Student with ID "+id+" not found";
 }

@@ -21,10 +21,19 @@ public class StudentServiceImpl implements StudentService {
     public List<student> getAllstudents(){
         return stdrepo.findAll();
     }
-    @override
-    
     @Override
-public string updateData(Long id,Student st){
+public Optional<student> getById(Long id){
+return stdrepo.findById(id);
+
+@Override
+public String updateData(Long id,Student st){
 boolean status=stdrepo.existsById(id);
-if(status)
+if(status){
+st.setId(id);
+stdrepo.save(st);
+return "Student updated successfully";
+
+elsef
+return "student with ID "+id+" not found";
+
 }

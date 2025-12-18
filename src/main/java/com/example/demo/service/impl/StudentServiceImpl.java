@@ -22,6 +22,7 @@ public class StudentServiceImpl implements StudentService {
         return stdrepo.findAll();
     }
     @override
+    
     @Override
 public string updateData(Long id,Student st){
 boolean status=stdrepo.existsById(id);
